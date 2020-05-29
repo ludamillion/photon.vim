@@ -10,13 +10,13 @@
     # 'background' can be "light" or "dark".
 
     information = {
-        author:      "Alex Vear",
-        email:       "av@axvr.io",
-        name:        "photon",
+        author:      "Luke Inglis",
+        email:       "ld.inglis@gmail.com",
+        name:        "tachyon",
         description: "An elegant, dark colour scheme with minimal syntax highlighting",
         background:  "dark",
         webpage:     "https://github.com/axvr/photon.vim",
-        licence:     "MIT (2019)"
+        licence:     "MIT (2020)"
     }
 
     # Color palette:
@@ -33,31 +33,46 @@
     #
     # If your colors are defined correctly, the resulting colorscheme is guaranteed
     # to work in GVim (Windows/Linux), MacVim (MacOS), and any properly set up terminal emulator.
-
     # Background
-    bg = ["#262626", 235, "black"]
-
-    # Darker background shades
-    bgd_1 = ["#1c1c1c", 234, "black"]
-
-    # Lighter background shades
-    bgl_1 = ["#303030", 236, "darkgray"]
-    bgl_2 = ["#3a3a3a", 237, "darkgray"]
-    bgl_3 = ["#444444", 238, "darkgray"]
-    bgl_4 = ["#626262", 241, "darkgray"]
+#
+    bg = ["#2e3440", 235, "black"]
 
     # Foreground
-    fg = ["#c6c6c6", 251, "white"]
+    fg = ["#e5e9f0", 251, "white"]
+
+    # Polar Night
+    nord0 = ["#2e3440", 236, "darkgray"]
+    nord1 = ["#3b4252", 237, "darkgray"]
+    nord2 = ["#434c5e", 238, "darkgray"]
+    nord3 = ["#4c566a", 241, "darkgray"]
+
+    # Snow Storm
+    nord4 = ["#d8dee9", 251, "white"]
+    nord5 = ["#e5e9f0", 251, "white"]
+    nord6 = ["#eceff4", 251, "white"]
+
+    # Frost 
+    nord7  = ["#8fbcbb", 68, "blue"]
+    nord8  = ["#88c0d0", 68, "blue"]
+    nord9  = ["#81a1c1", 68, "darkblue"]
+    nord10 = ["#5e81ac", 68, "darkblue"]
+
+    # Aurora
+    nord11 = ["#8fbcbb", 68, "red"]
+    nord12 = ["#88c0d0", 68, "orange"]
+    nord13 = ["#81a1c1", 68, "yellow"]
+    nord14 = ["#5e81ac", 68, "green"]
+    nord14 = ["#5e81ac", 68, "purple"]
 
     # Accents
-    purple = ["#af87d7", 140, "darkmagenta"]
-    orange = ["#d75f5f", 167, "red"]
-    grey = ["#767676", 243, "darkgray"]
+    # purple = ["#b48ead", 140, "darkmagenta"]
+    # orange = ["#d08770", 167, "red"]
+    # grey = ["#d8dee9", 243, "darkgray"]
 
-    yellow = ["#af8700", 136, "darkyellow"]
-    green = ["#87af87", 108, "darkgreen"]
-    blue = ["#5f87ff", 68, "blue"]
-    red = ["#af5f87", 132, "darkred"]
+    # yellow = ["#ebcb8b", 136, "darkyellow"]
+    # green = ["#81a1c1", 108, "darkgreen"]
+    # blue = ["#88c0d0", 68, "blue"]
+    # red = ["#bf616a", 132, "darkred"]
 
     # Highlights:
     #
@@ -93,11 +108,11 @@
 
     highlights = [
         [ "Normal", bg, fg, "NONE" ],
-        [ "NonText", "bg", bgl_3, "NONE" ],
-        [ "Comment", "bg", bgl_4, "NONE" ],
-        [ "Conceal", "bg", bgl_4, "NONE" ],
+        [ "NonText", "bg", nord2, "NONE" ],
+        [ "Comment", "bg", nord3, "italic" ],
+        [ "Conceal", "bg", nord3, "NONE" ],
 
-        [ "Constant", "bg", purple, "NONE" ],
+        [ "Constant", "bg", nord8, "NONE" ],
         [ "Character", "Constant" ],
         [ "Number", "Constant" ],
         [ "Float", "Number" ],
@@ -107,16 +122,16 @@
         [ "Identifier", "bg", fg, "NONE" ],
         [ "Function", "Identifier" ],
 
-        [ "Statement", "bg", grey, "NONE" ],
+        [ "Statement", "bg", nord4, "bold" ],
         [ "Conditonal", "Statement" ],
         [ "Repeat", "Statement" ],
         [ "Label", "Statement" ],
         [ "Keyword", "Statement" ],
         [ "Exception", "Statement" ],
 
-        [ "Operator", "bg", fg, "NONE" ],
+        [ "Operator", "bg", fg, "bold" ],
 
-        [ "PreProc", "bg", grey, "NONE" ],
+        [ "PreProc", "bg", nord4, "bold" ],
         [ "Include", "PreProc" ],
         [ "Define", "PreProc" ],
         [ "Macro", "PreProc" ],
@@ -127,78 +142,78 @@
         [ "Structure", "Type" ],
         [ "Typedef", "Type" ],
 
-        [ "Special", "NONE", grey, "NONE" ],
+        [ "Special", "NONE", nord1, "NONE" ],
         [ "SpecialChar", "Special" ],
         [ "Tag", "Special" ],
         [ "Delimiter", "Special" ],
         [ "SpecialComment", "Special" ],
         [ "Debug", "Special" ],
 
-        [ "Error", "NONE", red, "NONE" ],
+        [ "Error", "NONE", nord11, "NONE" ],
         [ "ErrorMsg", "Error" ],
-        [ "Warning", "NONE", yellow, "NONE" ],
+        [ "Warning", "NONE", nord13 , "NONE" ],
         [ "WarningMsg", "Warning" ],
 
-        [ "ModeMsg", "NONE", grey, "NONE" ],
+        [ "ModeMsg", "NONE", nord1, "NONE" ],
         [ "MoreMsg", "ModeMsg" ],
         [ "Question", "ModeMsg" ],
 
         [ "Ignore", "NonText" ],
-        [ "Todo", "NONE", orange, "bold" ],
+        [ "Todo", "NONE", nord12, "bold" ],
         [ "Underlined", "NONE", fg, "underline" ],
 
-        [ "StatusLine", bgl_2, purple, "NONE" ],
-        [ "StatusLineNC", bgl_1, grey, "NONE" ],
+        [ "StatusLine", nord1, nord8, "NONE" ],
+        [ "StatusLineNC", nord0, nord1, "NONE" ],
         [ "StatusLineTerm", "StatusLine" ],
         [ "StatusLineTermNC", "StatusLineNC" ],
         [ "TabLine", "StatusLineNC" ],
         [ "TabLineFill", "StatusLineNC" ],
         [ "TabLineSel", "StatusLine" ],
-        [ "WildMenu", bgl_1, orange, "NONE" ],
-        [ "VertSplit", bgl_1, bgl_1, "NONE" ],
+        [ "WildMenu", nord0, nord12, "NONE" ],
+        [ "VertSplit", nord0, nord0, "NONE" ],
 
         [ "Title", "NONE", fg, "bold" ],
 
-        [ "LineNr", "NONE", bgl_4, "NONE" ],
-        [ "CursorLineNr", bgl_1, purple, "NONE" ],
-        [ "Cursor", purple, fg, "NONE" ],
-        [ "CursorLine", bgl_1, "NONE", "NONE" ],
+        [ "LineNr", "NONE", nord3, "NONE" ],
+        [ "CursorLineNr", nord0, nord8, "NONE" ],
+        [ "Cursor", nord8, fg, "NONE" ],
+        [ "CursorLine", nord0, "NONE", "NONE" ],
         [ "CursorColumn", "CursorLine" ],
-        [ "ColorColumn", bgd_1, "NONE", "NONE" ],
-        [ "SignColumn", "NONE", grey, "NONE" ],
+        [ "ColorColumn", nord0, "NONE", "NONE" ],
+        [ "SignColumn", "NONE", nord1, "NONE" ],
 
-        [ "Visual", bgl_2, "NONE", "NONE" ],
-        [ "VisualNOS", bgl_3, "NONE", "NONE" ],
+        [ "Visual", nord7, "NONE", "NONE" ],
+        [ "VisualNOS", nord8, "NONE", "NONE" ],
 
-        [ "Pmenu", bgl_2, "NONE", "NONE" ],
-        [ "PmenuSbar", bgl_1, "NONE", "NONE" ],
-        [ "PmenuSel", bgl_1, purple, "NONE" ],
-        [ "PmenuThumb", orange, "NONE", "NONE" ],
+        [ "Pmenu", nord1, "NONE", "NONE" ],
+        [ "PmenuSbar", nord0, "NONE", "NONE" ],
+        [ "PmenuSel", nord0, nord8, "NONE" ],
+        [ "PmenuThumb", nord12, "NONE", "NONE" ],
 
-        [ "FoldColumn", "NONE", bgl_4, "NONE" ],
-        [ "Folded", bgd_1, grey, "NONE" ],
+        [ "FoldColumn", "NONE", nord3, "NONE" ],
+        [ "Folded", nord0, nord1, "NONE" ],
 
-        [ "SpecialKey", "NONE", grey, "NONE" ],
-        [ "IncSearch", orange, bg, "NONE" ],
-        [ "Search", purple, bg, "NONE" ],
-        [ "Directory", "NONE", purple, "NONE" ],
-        [ "MatchParen", "NONE", orange, "bold" ],
+        [ "SpecialKey", "NONE", nord1, "NONE" ],
+        [ "IncSearch", nord12, bg, "NONE" ],
+        [ "Search", nord8, bg, "NONE" ],
+        [ "Directory", "NONE", nord8, "NONE" ],
+        [ "MatchParen", "NONE", nord12, "bold" ],
 
-        [ "SpellBad", "NONE", red, "underline" ],
-        [ "SpellCap", "NONE", green, "underline" ],
-        [ "SpellLocal", "NONE", blue, "underline" ],
-        [ "SpellRare", "NONE", yellow, "underline" ],
+        [ "SpellBad", "NONE", nord11, "underline" ],
+        [ "SpellCap", "NONE", nord14, "underline" ],
+        [ "SpellLocal", "NONE", nord8, "underline" ],
+        [ "SpellRare", "NONE", nord13, "underline" ],
 
-        [ "QuickFixLine", bgd_1, "NONE", "NONE" ],
+        [ "QuickFixLine", nord0, "NONE", "NONE" ],
 
-        [ "DiffAdd", "NONE", green, "NONE" ],
-        [ "DiffChange", "NONE", yellow, "NONE" ],
-        [ "DiffDelete", "NONE", red, "NONE" ],
-        [ "DiffText", "NONE", orange, "NONE" ],
+        [ "DiffAdd", "NONE", nord14, "NONE" ],
+        [ "DiffChange", "NONE", nord13, "NONE" ],
+        [ "DiffDelete", "NONE", nord11, "NONE" ],
+        [ "DiffText", "NONE", nord12, "NONE" ],
         [ "diffAdded", "DiffAdd" ],
         [ "diffRemoved", "DiffDelete" ],
 
-        [ "helpHyperTextJump", "bg", purple, "NONE" ],
+        [ "helpHyperTextJump", "bg", nord8, "NONE" ],
         [ "htmlTag", "htmlTagName" ],
         [ "htmlEndTag", "htmlTag" ],
         [ "gitcommitSummary", "Title" ]
